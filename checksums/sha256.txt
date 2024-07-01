@@ -1,0 +1,2 @@
+SHA2-256(./resources/pres/explain_plan/dbms_xplan-cheat-sheet-1.0d2.docx)= 532adf75b5cf3bd1e380b3f178548d031dcfd62fb1d6701249381b79cbd294a3
+SHA2-256(./resources/pres/explain_plan/dbms_xplan-cheat-sheet-1.0d2.pdf)= 79b725ada32676d326595a771c9273a023fdab39e5c1a38624970b987a6711ed

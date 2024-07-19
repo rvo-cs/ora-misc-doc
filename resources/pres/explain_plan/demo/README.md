@@ -54,7 +54,7 @@ SQL> @demo_script
 Where `demo_script` is one of the following:
 
 * [`010-single_child.sql`](010-single_child.sql): this script demonstrates plan operations with a single child operation
-* [`020-unrelated_combine.sql`](020-unrelated_combine): this script demonstrates plan operations in the _"unrelated-combine"_ category [^3]
+* [`020-unrelated_combine.sql`](020-unrelated_combine.sql): this script demonstrates plan operations in the _"unrelated-combine"_ category [^3]
 
 And that's it.
 

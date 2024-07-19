@@ -22,8 +22,8 @@ The [release 23.3](https://github.com/oracle-samples/db-sample-schemas/releases/
 
 #### Privileges
 
-* READ/SELECT privileges on the above-mentioned sample schemas
-* DML privileges on the sample schemas [^1]
+* READ/SELECT privileges on objects in the above-mentioned sample schemas
+* DML privileges on objects in the sample schemas [^1]
 * Enough privileges to use DBMS\_XPLAN.display\_cursor, and to query the following V$ views: [^2]
      * v$session
      * v$sql
@@ -54,11 +54,11 @@ SQL> @demo_script
 Where `demo_script` is one of the following:
 
 * [`010-single_child.sql`](010-single_child.sql): this script demonstrates plan operations with a single child operation
-* [`020-unrelated_combine.sql`](020-unrelated_combine): this script demonstrates plan operations in the "unrelated-combine" category [^3] 
+* [`020-unrelated_combine.sql`](020-unrelated_combine): this script demonstrates plan operations in the _"unrelated-combine"_ category [^3]
 
 And that's it.
 
-[^3] Per Christian Antognini's classification of plan operations, in [Troubleshooting Oracle Performance](https://antognini.ch/top/), 2nd Edition, chapter 10.
+[^3]: Per Christian Antognini's classification of plan operations, in [Troubleshooting Oracle Performance](https://antognini.ch/top/), 2nd Edition, chapter 10.
 
 ### License
 

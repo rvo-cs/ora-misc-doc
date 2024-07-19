@@ -1,0 +1,13 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ora-misc-doc
+Source: https://github.com/rvo-cs/ora-misc-doc
+
+Files: resources/pres/explain_plan/demo/*.sql
+Copyright: 2024 R.Vassallo
+License: BSD Zero Clause License
+
+Files: resources/pres/explain_plan/demo/util/*.sql
+Copyright: 2024 R.Vassallo
+License: BSD Zero Clause License
+
+

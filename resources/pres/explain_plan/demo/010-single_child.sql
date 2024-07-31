@@ -45,6 +45,15 @@ define def_cat_sqlfile = "Y"
 @util/run_demo HR 010-0030-inlist-iterator.sql
 @util/demo_display_cursor
 
+prompt
+prompt !
+prompt ! Note how the predicate of operation 3 is (only) a convenient recount of
+prompt ! the work driven by the INLIST INTERATOR: actually the INDEX RANGE SCAN
+prompt ! was started 3 times, each time using a single key from the INLIST ITERATOR;
+prompt ! so this predicate (in the form of a disjunction) decribes the work done
+prompt ! through all iterations, not how each iteration was actually performed.
+prompt !
+
 @util/demo_pause
 
 ------------------------------------------------------------------------------------------

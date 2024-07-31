@@ -170,6 +170,29 @@ prompt !
 @util/demo_pause
 
 ------------------------------------------------------------------------------------------
+@util/run_demo HR 020-0095-merge-join-cartesian.sql
+@util/demo_display_cursor
+
+prompt
+prompt !
+prompt ! In MERGE JOIN CARTESIAN, not to be confused with MERGE JOIN, there isn't
+prompt ! a join condition between the 2 join inputs, which entirely removes the
+prompt ! need to sort rows. Meanwhile, a data structure is still needed to buffer
+prompt ! rows from the 2nd join input, so it can be scanned only once. For some
+prompt ! reason, the operation which gets rows from the 2nd join input and stores
+prompt ! them into this data structure is named BUFFER SORT, though it does not
+prompt ! actually sort.
+prompt !
+prompt ! For details about BUFFER SORT, please see:
+prompt ! https://jonathanlewis.wordpress.com/2006/12/17/buffer-sorts/
+prompt !
+prompt ! Again, the Starts column for the BUFFER SORT plan operation records how
+prompt ! many times its data structure was probed.
+prompt !
+
+@util/demo_pause
+
+------------------------------------------------------------------------------------------
 column job_title format a35
 
 @util/run_demo HR 020-0100-or-expansion-disabled.sql
@@ -218,6 +241,24 @@ prompt ! plan readout shows that the estimated cost is not better than in the
 prompt ! case of the unhinted query, which is why the optimizer did not choose
 prompt ! to use that transformation in the first place. Here this plan also
 prompt ! turns out to do more logical reads than the initial plan above.
+prompt !
+
+@util/demo_pause
+
+------------------------------------------------------------------------------------------
+@util/run_demo HR 020-0110-sample-full-outer-join.sql
+
+@util/demo_display_cursor
+
+prompt
+prompt !
+prompt ! Remarks:
+prompt !
+prompt ! 1) AFAIK, there isn't a "native Oracle syntax" for full outer joins
+prompt !
+prompt ! 2) The alternative plan, using a UNION ALL of an outer join and an
+prompt !    anti-join (rather than the native HASH JOIN FULL OUTER operation)
+prompt !    can be forced using the (documented) no_native_full_outer_join hint
 prompt !
 
 @util/demo_pause

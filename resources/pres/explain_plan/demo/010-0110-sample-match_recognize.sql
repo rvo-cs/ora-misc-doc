@@ -15,9 +15,9 @@ select dense_rank() over (order by match#) as seq_num,
               all rows per match
               after match skip past last row
               pattern (strt incr+)
-              define incr as incr.first_name_len = prev(incr.first_name_len) + 1
+              define incr as incr.first_name_len > prev(incr.first_name_len)
           ) mr
        )
  where match_rank = 1
  order by seq_num, hire_date, first_name_len;
- 
+

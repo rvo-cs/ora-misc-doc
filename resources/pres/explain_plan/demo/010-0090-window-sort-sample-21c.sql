@@ -23,5 +23,5 @@ select emp.department_id, emp.job_id,
                         exclude current row /* 21c enhancement */ )) as avg_salary
            from employees em0
        ) emp
- where emp.cnt_12m > 5
+ where emp.cnt_12m >= 5
    and emp.salary >= emp.avg_salary * 1.10;

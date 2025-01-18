@@ -5,8 +5,13 @@ whenever oserror exit failure rollback
 @util/demo_sqlplus_init
 
 ------------------------------------------------------------------------------------------
-column country_id   format a10
-column country_name format a20
+column country_id    format a10
+column country_name  format a20
+column first_name    format a20
+column last_name     format a25
+column mgr_last_name format a25
+column job_id        format a10
+------------------------------------------------------------------------------------------
 
 @util/run_demo HR 010-0010-simple-index-range-scan.sql
 @util/demo_display_cursor
@@ -22,18 +27,13 @@ prompt !
 @util/demo_explain_preds "sql_id:&&def_prev_sql_id" 1
 
 @util/demo_pause
-@util/demo_clear_columns
 
 ------------------------------------------------------------------------------------------
-column country_id   format a10
-column country_name format a20
-
 define def_cat_sqlfile = "Y"
 @util/run_demo_again HR 010-0010-simple-index-range-scan-wt-binary_ci.sql
 @util/demo_display_cursor
 
 @util/demo_pause
-@util/demo_clear_columns
 
 ------------------------------------------------------------------------------------------
 @util/run_demo HR 010-0020-table-access-by-index-rowid.sql
@@ -156,4 +156,5 @@ set termout off
 rollback;
 set termout on
 
+@util/demo_clear_columns
 @util/demo_sqlplus_cleanup

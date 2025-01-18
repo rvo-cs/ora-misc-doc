@@ -7,13 +7,22 @@ whenever oserror exit failure rollback
 ------------------------------------------------------------------------------------------
 column first_name      format a15
 column last_name       format a15
+column email           format a15
+column phone_number    format a20
 column manager_name    format a15
+column mgr_last_name   format a15
 column hire_date       format a11 truncate
-column city            format a25
+column city            format a20
 column department_name format a20
+column mgr_dept_name   format a20
+column region_name     format a15
+column job_id          format a10
+column mgr_job_id      format a10
 column job_title       format a20
 column job_title_2     format a20
+column indic           format a5
 ------------------------------------------------------------------------------------------
+
 @util/run_demo HR 020-0010-plain-hash-join-sample.sql
 @util/demo_display_cursor
 

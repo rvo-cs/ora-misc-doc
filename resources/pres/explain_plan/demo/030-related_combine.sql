@@ -5,13 +5,16 @@ whenever oserror exit failure rollback
 @util/demo_sqlplus_init
 
 ------------------------------------------------------------------------------------------
-column first_name   format a15
-column last_name    format a15
-column hire_date    format a11 truncate
-column city         format a15
-column country_id   format a10
-column country_name format a20
-column region_name  format a15
+column first_name      format a15
+column last_name       format a15
+column hire_date       format a11 truncate
+column city            format a15
+column country_id      format a10
+column country_name    format a20
+column region_name     format a15
+column department_name format a20
+column lev1_mgr_name   format a15
+column lev2_mgr_name   format a15
 
 ------------------------------------------------------------------------------------------
 set termout off

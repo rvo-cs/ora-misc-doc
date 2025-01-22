@@ -113,6 +113,7 @@ order by
     gen.n;
 column explain_stmt clear
 spool off
+delete from plan_table pt where pt.statement_id = 'sql_id:&&def_prev_sql_id';
 @.demo_explain_temp.sql
 host &&def_host_cmd_rm .demo_explain_temp.sql
 set termout on

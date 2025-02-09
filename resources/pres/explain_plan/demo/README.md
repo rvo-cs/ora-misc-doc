@@ -20,7 +20,7 @@ The following Oracle sample schema(s) must be installed:
 
 The [release 23.3](https://github.com/oracle-samples/db-sample-schemas/releases/tag/v23.3) of the DB sample schemas is expected.
 
-#### Privileges
+#### Required Privileges
 
 * READ/SELECT privileges on objects in the above-mentioned sample schemas
 * DML privileges on objects in the sample schemas [^1]
@@ -60,15 +60,14 @@ SQL> @demo_script
 Where `demo_script` is one of the following:
 
 * [`010-single_child.sql`](010-single_child.sql): this script demonstrates plan operations with a single child operation
-* [`020-unrelated_combine.sql`](020-unrelated_combine.sql): this script demonstrates plan operations in the _"unrelated-combine"_ category [^3]
-* [`030-related_combine.sql`](030-related_combine.sql): this script demonstrates plan operations in the _"related-combine"_ category [^3]
+* [`020-unrelated_combine.sql`](020-unrelated_combine.sql): this script demonstrates plan operations in the _"unrelated-combine"_ category [^4]
+* [`030-related_combine.sql`](030-related_combine.sql): this script demonstrates plan operations in the _"related-combine"_ category [^4]
 * [`040-special_cases.sql`](040-special_cases.sql): this script illustrates a couple of special cases, and DML statements.
 
 And that's it.
 
-[^3]: Per Christian Antognini's classification of plan operations, in [Troubleshooting Oracle Performance](https://antognini.ch/top/), 2nd Edition, chapter 10.
+[^4]: Per Christian Antognini's classification of plan operations, in [Troubleshooting Oracle Performance](https://antognini.ch/top/), 2nd Edition, chapter 10.
 
 ### License
 
 Licensed under the [BSD Zero Clause License](https://spdx.org/licenses/0BSD.html).
-

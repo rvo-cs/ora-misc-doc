@@ -32,10 +32,16 @@ The [release 23.3](https://github.com/oracle-samples/db-sample-schemas/releases/
      * v$sql\_plan
      * v$sql\_plan\_statistics\_all
      * v$parameter
+* The CREATE TABLE system privilege [^3]
 
 [^1]: This is for demonstrating DML statements, such as UPDATE or MERGE. Everything should be rolled back, in principle.
 
 [^2]: Typically (though not absolutely necessary) an account with SELECT\_CATALOG\_ROLE could be used.
+
+[^3]: Used for creating a small global temporary table in the schema of the user running the demos.
+
+Remark: the sample SQL\_PLANS\_DEMO\_ROLE role can be created in order to grant the required privileges;
+see [`sql_plans_demo_role.sql`](grants/sql_plans_demo_role.sql)
 
 ### How to run the demos
 
@@ -56,6 +62,7 @@ Where `demo_script` is one of the following:
 * [`010-single_child.sql`](010-single_child.sql): this script demonstrates plan operations with a single child operation
 * [`020-unrelated_combine.sql`](020-unrelated_combine.sql): this script demonstrates plan operations in the _"unrelated-combine"_ category [^3]
 * [`030-related_combine.sql`](030-related_combine.sql): this script demonstrates plan operations in the _"related-combine"_ category [^3]
+* [`040-special_cases.sql`](040-special_cases.sql): this script illustrates a couple of special cases, and DML statements.
 
 And that's it.
 

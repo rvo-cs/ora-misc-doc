@@ -10,4 +10,7 @@ Files: resources/pres/explain_plan/demo/util/*.sql
 Copyright: 2024 R.Vassallo
 License: BSD Zero Clause License
 
+Files: resources/pres/explain_plan/demo/grants/*.sql
+Copyright: 2025 R.Vassallo
+License: BSD Zero Clause License
 
